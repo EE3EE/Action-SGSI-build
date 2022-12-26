@@ -80,7 +80,7 @@ jobs:
       - name: Make AB type GSI‌‌...
         if: ${{ github.event.inputs.SGSI_TYPE }} == 'AB' || ${{ github.event.inputs.SGSI_TYPE }} == 'BOTH'
         run: |
-          sudo bash $GITHUB_WORKSPACE/Tool-SGSI-build/make.sh AB << EOF
+          sudo bash $GITHUB_WORKSPACE/Tool-SGSI-build/make.sh <Build Type> <OS Type> <Firmware Path> [Other args]<< EOF
           ${{ github.event.inputs.ZIP_NAME }}
           y
           y
